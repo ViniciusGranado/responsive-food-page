@@ -24,3 +24,18 @@ menu.addEventListener('click', toggleMenu);
 window.addEventListener('scroll', closeMenu);
 searchIcon.addEventListener('click', openSearchForm);
 closeFormIcon.addEventListener('click', closeSearchForm);
+
+// Swiper slider
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 7500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop: true,
+});
