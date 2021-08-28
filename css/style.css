@@ -86,9 +86,57 @@ header .icons #menu-bars {
   display: none;
 }
 
+/* FORM */
+#search-form {
+  position: fixed;
+  top: -110%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1004;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+#search-form.active {
+  top: 0;
+}
 
+#search-form #search-box {
+  width: 50rem;
+  border-bottom: 0.1rem solid #FFF;
+  padding: 1rem 0;
+  color: #FFF;
+  font-size: 3rem;
+  text-transform: none;
+  background: none;
+}
+#search-form #search-box::placeholder {
+  color: #EEE;
+}
+#search-form #search-box::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
 
-
+#search-form label {
+  color: #FFF;
+  cursor: pointer;
+  font-size: 3rem;
+}
+#search-form label:hover {
+  color: var(--green);
+  
+}
+#search-form #close {
+  position: absolute;
+  color: #FFF;
+  cursor: pointer;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+}
 
 
 
@@ -128,6 +176,11 @@ header .icons #menu-bars {
 
   header .icons #menu-bars {
     display: inline-block;
+  }
+
+  #search-form #search-box {
+    width: 90%;
+    margin: 0 1rem;
   }
 }
 
